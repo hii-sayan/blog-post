@@ -30,7 +30,6 @@ class UserUpdate(BaseModel):
     email: EmailStr | None = Field(default=None, max_length=120)
 
 
-
 class Token(BaseModel):
     access_token: str
     token_type: str
@@ -57,3 +56,11 @@ class PostResponse(PostBase):
     user_id: int
     date_posted: datetime
     author: UserPublic
+
+
+class PaginatedPostsResponse(BaseModel):
+    posts: list[PostResponse]
+    total: int
+    skip: int
+    limit: int
+    has_more: bool

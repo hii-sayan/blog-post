@@ -1,2 +1,11 @@
 ####dotenv###
 .env
+
+# Python compilation files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
